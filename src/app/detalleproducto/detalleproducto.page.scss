@@ -1,0 +1,30 @@
+
+.detalle-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .descuento {
+    display: inline-block;
+    background-color: #f2f2f2;
+    padding: 2px 6px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    margin-right: 8px;
+    text-align: center;
+    line-height: 1;
+  }
+  
+  .precio {
+    flex: 1;
+    text-align: right;
+    font-weight: bold; /* Añadir negrita al precio para resaltar */
+    margin-top: -2px; /* Ajuste para alinear verticalmente con descuento */
+  }
+
+
+  ion-card-title {
+    font-size: 20px; /* Tamaño de fuente de 20px */
+    font-weight: bold; /* Texto en negrita */
+    text-align: center; /* Alinear texto al centro */
+  }

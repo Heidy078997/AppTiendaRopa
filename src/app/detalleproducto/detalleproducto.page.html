@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title ></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{categoria_seleccionada?.titulo}}</ion-card-title>
+      <ion-card-subtitle><ion-img [src]="categoria_seleccionada?.img"></ion-img></ion-card-subtitle>
+      <ion-card-subtitle>{{categoria_seleccionada?.descripcion}}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <div class="descuento-container">
+        <div class="descuento">
+          {{ categoria_seleccionada?.porcentaje_descuento }}%
+        </div>
+      </div>
+      <div class="precio">
+        ${{ categoria_seleccionada?.precio }}
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

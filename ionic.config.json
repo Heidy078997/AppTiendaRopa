@@ -1,0 +1,7 @@
+{
+  "name": "AppTiendaDeRopa",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

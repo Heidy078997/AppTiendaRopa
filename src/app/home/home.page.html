@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="margin: 0 auto; text-align: center; width: 100%;">
+      Catálogo de productos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label>Categoría</ion-label>
+    <ion-select multiple="false" interface="popover" placeholder="Seleccione una categoría de ropa" (ionChange)="getProductosCaterogias()" [(ngModel)]="id_categoria_seleccionada">
+      <ion-select-option  *ngFor="let producto of list_prod"  [value]="producto.id">{{producto.descripcion}}</ion-select-option>
+  
+    </ion-select>
+  </ion-item>
+
+ 
+  <ion-card *ngFor="let categoria of list_categ" (click)="mostrarListaProductos(categoria)">
+    <ion-card-header>
+      <ion-card-title>{{categoria.titulo}}</ion-card-title>
+      <ion-card-subtitle>{{categoria.descripcion}}</ion-card-subtitle>
+      <ion-card-subtitle class="subtitle-right">${{categoria.precio}}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-img [src]="categoria.img"></ion-img>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
